@@ -1,0 +1,112 @@
+.foodContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cardsList {
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  width: 200px;
+  background-color: rgba(0, 0, 0, 0.553);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card img {
+  width: 100px;
+}
+
+.card button {
+  background-color: rgba(255, 255, 255, 0.125);
+  border-radius: 5px;
+  padding: 0px 15px;
+  border: none;
+  outline: none;
+  color: rgba(255, 255, 255, 0.384);
+  cursor: pointer;
+  font-size: 35px;
+  transition: all 0.3s;
+}
+
+.card button:hover {
+  color: rgb(255, 255, 255);
+}
+
+.card button:active {
+  background-color: rgba(255, 255, 255, 0.363);
+}
+
+.card .picture {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card .title {
+  width: 100%;
+  margin: 10px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card .quantity {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1025px) {
+    .cardsList{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card{
+        width: 180px
+    }
+
+    .card img{
+        width: 80px;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .card{
+        width: 150px
+    }
+    .card img{
+        width: 60px;
+    }
+
+    .card h3{
+        font-size: 14px;
+    }
+
+    .card button{
+        font-size: 17px;
+    }
+    .cardsList{
+        height: 700px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .cardsList{
+        height: 500px;
+    }
+}
