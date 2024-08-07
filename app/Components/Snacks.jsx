@@ -110,7 +110,7 @@ function Snacks() {
       </div>
       <div className="cardsList">
         {inventory.map(({ name, quantity, imageUrl }) => (
-          <div className="card">
+          <div className="card" key={name}>
             <div className="picture">
               <img src={imageUrl} alt="" />
             </div>
