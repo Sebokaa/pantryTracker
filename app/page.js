@@ -5,7 +5,6 @@ import styles from "./page.module.css";
 
 export default function Home() {
   return (
-    
     <div className={styles.App}>
       <video
         src={require("./videos/City.mp4")}
@@ -15,7 +14,7 @@ export default function Home() {
         className={styles.bgVideo}
       />
       <div className={styles.navBar}>
-      <div className={styles.left}>
+        <div className={styles.left}>
           <h1>Snack Tracker</h1>
           <hr />
         </div>
