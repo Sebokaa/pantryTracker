@@ -1,11 +1,12 @@
 .foodContainer {
+    margin-top: 150px;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .cardsList {
-  width: 100%;
+  width: 80%;
   padding: 20px;
   display: grid;
   justify-items: center;
@@ -56,6 +57,10 @@
   align-items: center;
 }
 
+.picture img{
+  border-radius: 10px;
+}
+
 .card .title {
   width: 100%;
   margin: 10px 0px;
@@ -63,6 +68,47 @@
   justify-content: center;
   align-items: center;
 }
+
+input::file-selector-button {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.125);
+  border-radius: 5px;
+  padding: 5px 10px;
+  border: none;
+  outline: none;
+  color: rgba(255, 255, 255, 0.384);
+  cursor: pointer;
+  font-size: 17px;
+  transition: all 0.3s;
+  }
+
+  input::file-selector-button:hover{
+    color: rgb(255, 255, 255);
+  }
+  
+  input::file-selector-button:active{
+    background-color: rgba(255, 255, 255, 0.363);
+  }
+
+  .foodContainer .inputPadding{
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.125);
+    color: white;
+    padding: 12px 10px;
+    border-radius: 5px;
+    font-size: 17px;
+    width: 170px;   
+  }
+
+  .foodContainer .uploadFile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 110px;
+  }
 
 .card .quantity {
   width: 100%;
@@ -72,6 +118,9 @@
 }
 
 @media only screen and (max-width: 1025px) {
+    .foodContainer{
+        margin-top: 150px;      
+    }
     .cardsList{
         grid-template-columns: repeat(2, 1fr);
     }
@@ -85,11 +134,14 @@
 }
 
 @media only screen and (max-width: 650px) {
+    .foodContainer{
+        margin-top: 70em;
+    }
     .card{
-        width: 150px
+        width: 190px
     }
     .card img{
-        width: 60px;
+        width: 90px;
     }
 
     .card h3{
@@ -100,13 +152,6 @@
         font-size: 17px;
     }
     .cardsList{
-        height: 700px;
         grid-template-columns: repeat(1, 1fr);
-    }
-}
-
-@media only screen and (max-width: 380px) {
-    .cardsList{
-        height: 500px;
     }
 }

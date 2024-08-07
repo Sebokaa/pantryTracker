@@ -21,31 +21,18 @@
   top: 0;
   width: 100%;
   display: flex;
-  padding: 0px 10px;
   justify-content: right;
   color: white;
 }
 
 .addItem {
-  width: 310px;
+  width: 400px;
   border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
   padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.552);
-}
-
-.addItem input{
-  border: none;
-  outline: none;
-  background-color: rgba(255, 255, 255, 0.125);
-  color: white;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 17px;
-  width: 150px;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .addItem button{
@@ -54,7 +41,7 @@
   align-items: center;
   background-color: rgba(255, 255, 255, 0.125);
   border-radius: 5px;
-  padding: 5px 10px;
+  padding: 12px 10px;
   border: none;
   outline: none;
   color: rgba(255, 255, 255, 0.384);
@@ -83,11 +70,15 @@
 }
 
 .left{
-  min-height: 100vh;
-  background-color: rgba(0, 0, 0, 0.704);
+  z-index: -1;
+  padding: 27px 20px;
+  position: absolute;
+  left: 0;
+  border-bottom-right-radius: 10px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
   display: flex;
   justify-content: left;
-  padding: 0px 20px;
   align-items: center;
 }
 
@@ -117,10 +108,14 @@
 .right{
   overflow: auto;
   height: 100vh;
-  width: 80%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.inputPadding{
+  padding: 20px 20px;
 }
 
 @media only screen and (max-width: 750px) {
@@ -134,6 +129,15 @@
 }
 
 @media only screen and (max-width: 650px) {
+  .bgVideo{
+    display: none;
+  }
+  .App{
+    background-image: url("./Images/bgImag.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+  }
   .navBar {
     background-color: rgb(0, 0, 0);
     justify-content: center;
